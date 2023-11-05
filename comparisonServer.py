@@ -31,7 +31,7 @@ def startPeers(peerList,mode,nMsgs):
 	# Connect to each of the peers and send the 'initiate' signal:
 	peerNumber = 0
 	for peer in peerList:
-		print("peer number " + peerNumber + ", public ip " + peer)
+		print("peer number " + str(peerNumber) + ", public ip " + str(peer))
 		clientSock = socket(AF_INET, SOCK_STREAM)
 		clientSock.connect((peerList[peerNumber], PEER_TCP_PORT))
 		msg = (peerNumber,mode,nMsgs)
